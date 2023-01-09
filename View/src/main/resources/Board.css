@@ -1,0 +1,39 @@
+.root {
+    -fx-pref-width: 512px;
+    -fx-pref-height: 512px;
+    -fx-alignment: center;
+}
+
+.grid {
+    -fx-padding: 5px;
+}
+
+.cell {
+    -fx-padding: 2px;
+}
+
+.cell:right {
+    -fx-padding: 2px 8px 2px 2px;
+}
+
+.cell:bottom {
+    -fx-padding: 2px 2px 8px 2px;
+}
+
+.cell:right:bottom {
+    -fx-padding: 2px 8px 8px 2px;
+}
+
+.cell .text-field {
+    -fx-pref-width: 4em;
+    -fx-pref-height: 4em;
+    -fx-text-alignment: center;
+    -fx-font-size: 2em;
+    -fx-padding: 0em 0em 0em 0.7em;
+}
+
+.cell .text-field:disabled {
+    -fx-text-fill: black;
+    -fx-opacity: 100%;
+    -fx-background-color: lightgray;
+}

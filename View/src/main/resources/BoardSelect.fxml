@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BoardSelect">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="250.0" prefWidth="400.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="168.0" prefWidth="265.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" text="%label.select_board" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="16.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ChoiceBox id="select" prefWidth="150.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <padding>
+            <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+         </padding>
+         <bottom>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="32.0" prefWidth="536.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="load" mnemonicParsing="false" text="%button.load">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="16.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cencel" mnemonicParsing="false" text="%button.cancel">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="16.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+      <Label layoutX="-138.0" layoutY="-147.0" text="Select board:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

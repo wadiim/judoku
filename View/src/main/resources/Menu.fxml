@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Game">
+    <center>
+        <VBox alignment="CENTER" prefHeight="512.0" prefWidth="512.0" spacing="8.0" BorderPane.alignment="CENTER">
+            <Label fx:id="difficulty" text="%menu.difficulty">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+
+            <fx:define>
+                <ToggleGroup fx:id="difficultyGroup" />
+            </fx:define>
+
+            <RadioButton fx:id="easy" minWidth="${medium.width}" text="%menu.easy" toggleGroup="$difficultyGroup">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </RadioButton>
+            <RadioButton fx:id="medium" selected="true" text="%menu.medium" toggleGroup="$difficultyGroup">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </RadioButton>
+            <RadioButton fx:id="hard" minWidth="${medium.width}" text="%menu.hard" toggleGroup="$difficultyGroup">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </RadioButton>
+        </VBox>
+    </center>
+    <bottom>
+        <Button fx:id="start" mnemonicParsing="false" onAction="#newGame" text="%menu.start" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+    </bottom>
+   <padding>
+      <Insets bottom="32.0" />
+   </padding>
+   <top>
+      <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="497.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="%menu.file">
+            <items>
+                <Menu fx:id="load" mnemonicParsing="false" text="%menu.load">
+                    <MenuItem fx:id="loadFromFile" mnemonicParsing="false" onAction="#loadGame" text="%menu.load_from_file" />
+                    <MenuItem fx:id="loadFromDB" mnemonicParsing="false" onAction="#loadBoardFromDB" text="%menu.load_from_db" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="%menu.settings">
+                    <Menu text="%menu.language">
+                        <fx:define>
+                            <ToggleGroup fx:id="languageGroup" />
+                        </fx:define>
+                        <RadioMenuItem fx:id="english" onAction="#switchLanguage" text="%menu.english" toggleGroup="$languageGroup" />
+                        <RadioMenuItem fx:id="polish" onAction="#switchLanguage" text="%menu.polish" toggleGroup="$languageGroup" selected="true" />
+                    </Menu>
+                </Menu>
+            </items>
+          </Menu>
+          <Menu fx:id="helpMenu" mnemonicParsing="false" text="%menu.help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showInfo" text="%menu.about" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
